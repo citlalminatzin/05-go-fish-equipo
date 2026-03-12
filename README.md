@@ -1,16 +1,42 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jw8MUQHd)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23030704)
-# Pon aquí el título de tu práctica o no, no soy tu papá
+# Práctica 5: Modelos de Similitud Geométrica
 
-(Si no eliminas esta línea lloro) Este es un archivo de ejemplo donde debes de colocar la respuesta a tus ejercicios, piénsalo como tu reporte de práctica. Aquí puedes introducir el problema y definir los términos que consideres apropiados de forma concisa.
+**El Problema del Campeonato de Pesca De Róbalo**
+
+Imaginemos que la competencia premia al pez más pesado, pero la única herramienta con la que contamos para determinar el peso de los peces es una cinta métrica. Como en las versiones anteriores del campeonato asistieron miles de participantes queremos poder predecir el peso de un pescado en término de algunas dimensiones fáciles de medir. A pesar de que el peso de un pescado se ve afectado por variables como la forma del pescado, la densidad del pescado, la edad del pescado, entre otras, haremos un modelo que dependa solo de variables medibles por nuestra cinta métrica. Algunos de los supuestos que usaremos en nuestro modelo son que:
+
+• La especie está fija y todos los pescados serán robalos. (En general esto sí sucede en los campeonatos).
+
+• La densidad de los pescados es constante. (Esto es poco realista pero nos servirá para un primer modelo).
+
+• Las variables como la estación del año, el sexo, la edad, etc. no afectan al peso del róbalo.
+
+• Los róbalos son geométricamente similares.
+
+Ahora, recordando que la densidad (ρ) es igual a la masa entre el volumen, podemos calcular el peso (W) de un pescado multiplicando su volumen por su densidad:
+
+$W =V ⋅ ρ$
+
+Ahora, bajo nuestro supuesto de densidad constante y de similitud geométrica tenemos que
+
+$W \propto V$
+
+$W \propto l ^3$
+
+A continuación pondremos a prueba nuestro primer modelo.
+
+Nota:
+
+• La masa corresponde a la cantidad de materia que compone un objeto determinado.
+
+• El peso, en cambio, corresponde a la fuerza resultante de la acción que ejerce la gravedad de la Tierra (en nuestro caso).
 
 ## Integrantes
 
-(Si no eliminas esta línea lloro) Escribe tus integrantes iniciando por apellido de forma alfabética
-
-- (Si no modificas esta línea lloro) Babilonia, Aureliano
-- (Si no modificas esta línea lloro) Buendía, Aureliano
-- (Si no modificas esta línea lloro) Segundo, Aureliano
+- Herrera Barrera Joyce
+- Pulido Pérez José Antonio
+- Rodríguez Rodríguez Diego
 
 
 ## Uso e instalación
@@ -25,29 +51,33 @@
 - `` (Por favor modifica esta línea)
 
 ## Ejercicio 1
+Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
+
+![Tabla de Datos](tabla.png)
+
+En realidad, lo que medimos cuando "pesamos" en kg es la masa, y no el peso, de lo que estemos midiendo. 
+
+Grafica los datos de esta tabla de acuerdo a la relación:
+
+$W \propto l ^3$
 
 (Por favor modifica esta línea, lo suplico por piedad) Aquí puedes colocar la discusión del modelo, tu interpretación, el efecto de las condiciones iniciales. No tiene que ser perfecto, pero entre más casos puedas cubrir mejor
 
 ## Ejercicio 2
 
-(Por favor modifica esta línea, tú puedes yo creo en ti) Puedes darle formato de **negritas**, *itálicas*, incluir texto matemático $x\approx 1, \epsilon > 0$, [enlaces](https://www.markdownguide.org/cheat-sheet/), `código`,
+Utiliza los datos anteriores y el método de tu preferencia para estimar un buen valor de $K$ para nuestro modelo de similaridad geométrica $W = Kl^3$. Grafica la estimación contra los datos. 
 
-```python
-# Esto es un ejemplo, lo puedes quitar
-print("Código en bloque")
-```
-
-(Si no eliminas esta línea lloro) También puedes incluir citas
-
-> Por favor elimina esta cita
-
-(Si no eliminas esta línea lloro) Puedes incluir notas al pie [^1].
+¿Qúe tan bueno es el ajuste? ¿Hay algún efecto que nuestro modelo no capture?
 
 ## Ejercicio 3
 
-(Puedes modificar esta línea, su único propósito es existir para ser modificada, cada momento que existe en su forma original llora por no formar parte de la formación de jovenes matemáticas como tú) También se pueden incluir imágenes. Aunque a veces aunque se muestre localmente, no significa que se vaya a mostrar en GitHub. Por ejemplo, adjunto una imagen de una bella rosa:
+# Coeficiente de correlación de Pearson
 
-![Texto alternativo, imagen de la cara de un Mr. Meeseks en fondo azul con la leyenda Existence is Pain por debajo](media/existence_is_pain.jpg)
+Ahora añadiremos una dimensión extra a nuestra tabla anterior. Supongamos que además de los datos anteriores también tenemos disponible la circunferencia máxima de cada pez.
+
+Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo queda la fórmula explicita del modelo?¿Qué tan bueno es el ajuste?
+
+
 
 ### También puedes agregar tablas y eliminar este sub encabezado
 
