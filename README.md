@@ -43,13 +43,11 @@ Nota:
 
 Para ejecutar el código, necesitaremos:
 
-- `matplotlib` Lo necesitaremos para agregar y vizualizar las graficas. 
+- `matplotlib`: Lo necesitaremos para agregar y vizualizar las gráficas.
+-  `numpy`: Lo necesitaemos para, entre otras cosas, calcular el coeficiente de correlación de Pearson.  
 
-Primero, ejecuta modelos.py, despues, main.py
-(Si no eliminas esta línea lloro) Y dime cómo debería ejecutar tu código y en qué orden. Recuerda que antes de ejecutar tu código leeré tu `README.md`. Por ejemplo la manera en la que propongo que organizes tu código es
-
-- `main.py`: Contiene el código para graficar cada uno de los tres ejercicios
-
+Primero, ejecuta modelos.py, en éste encontrarás funciones como:
+ calc_error, modeo_geom, modelo_circ, cal_k_constante. Estas funciones nos servirán para hacer los cálculos necesarios para lo que se pide en los ejercicios. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
 
 ## Ejercicio 1
 Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
@@ -91,10 +89,10 @@ Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo que
 
 ### También puedes agregar tablas y eliminar este sub encabezado
 
-| Elimíname | Elimíname a mí también |
-| -------------- | --------------- |
-| $1$ | $54$ |
-| $2$ | $1000$ |
+| Elimíname | Elimíname a mí también |algo|
+| -------------- | --------------- |--|
+| $1$ | $54$ | 90|
+| $2$ | $1000$ |sd|
 
 (Si no eliminas esta línea lloro) Y luego puedes comentar que con base en la tabla anterior, se ve una explosión en los valores a partir del tiempo $t=2$. 
 
