@@ -16,7 +16,7 @@ def plot_ejercicio1(longitudes, pesos):
 
     plt.grid(True)
 
-    plt.savefig("grafica1.png")
+    plt.savefig("media/grafica1.png")
     plt.show()
     plt.close()
 
@@ -36,7 +36,7 @@ def make_plot(longitudes, pesos, K):
     plt.legend()
     plt.grid(True)
 
-    plt.savefig("grafica_modelo1.png")
+    plt.savefig("media/grafica_modelo1.png")
     plt.show()
     plt.close()
     
@@ -61,7 +61,7 @@ def make_plot_circ(longitudes, circunferencias, pesos, K):
     plt.legend()
     plt.grid(True)
 
-    plt.savefig("grafica_modelo2.png")
+    plt.savefig("media/grafica_modelo2.png")
     plt.show()
     plt.close()
 
