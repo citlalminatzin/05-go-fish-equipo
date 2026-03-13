@@ -52,7 +52,7 @@ Primero, ejecuta modelos.py, en éste encontrarás funciones como:
 ## Ejercicio 1
 Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
 
-![Tabla de Datos](tabla.png)
+![Tabla de Datos](media/tabla.png)
 
 En realidad, lo que medimos cuando "pesamos" en kg es la masa, y no el peso, de lo que estemos midiendo. 
 
@@ -60,8 +60,7 @@ Graficamos los datos de esta tabla de acuerdo a la relación:
 
 $W \propto l ^3$
 
-![Gráfica de relación $W y l^3$](grafica1.png)
-
+![Gráfica de relación $W y l^3$](media/grafica1.png)
 (Por favor modifica esta línea, lo suplico por piedad) Aquí puedes colocar la discusión del modelo, tu interpretación, el efecto de las condiciones iniciales. No tiene que ser perfecto, pero entre más casos puedas cubrir mejor
 
 ## Ejercicio 2
@@ -70,7 +69,7 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 
 ¿Qúe tan bueno es el ajuste? ¿Hay algún efecto que nuestro modelo no capture?
 
-![Gráfica del Modelo $W = Kl^3$](grafica_modelo1.png)
+![Gráfica del Modelo $W = Kl^3$](media/grafica_modelo1.png)
 
 *Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
 
@@ -86,14 +85,9 @@ Ahora añadiremos una dimensión extra a nuestra tabla anterior. Supongamos que 
 
 Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo queda la fórmula explicita del modelo?¿Qué tan bueno es el ajuste?
 
-### También puedes agregar tablas y eliminar este sub encabezado
 
-| Elimíname | Elimíname a mí también |algo|
-| -------------- | --------------- |--|
-| $1$ | $54$ | 90|
-| $2$ | $1000$ |sd|
+![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
 
-(Si no eliminas esta línea lloro) Y luego puedes comentar que con base en la tabla anterior, se ve una explosión en los valores a partir del tiempo $t=2$. 
 
 ## Conclusión
 
