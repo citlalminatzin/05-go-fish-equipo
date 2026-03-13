@@ -35,16 +35,22 @@ def modelo_geom(longitudes: list[float], K: float) -> list[float]:
     return pesos_competencia
 
 
-def modelo_circ(longitudes: list[float]) -> list[float]:
-    """
-    Modelo donde el peso depende del área (~ L^2)
-    longitudes: lista de longitudes de peces (en cm)
-    Regresa pesos proporcionales a L^2
-    """
+def cal_k_circ(longitudes, circunferencias, pesos):
+    """Calcula K para el modelo W = K L C^2."""
+    k_vals = []
+
+    for L, C, W in zip(longitudes, circunferencias, pesos):
+        k_vals.append(W / (L * (C ** 2)))
+
+    return np.mean(k_vals)
+
+
+def modelo_circ(longitudes, circunferencias, K):
+    """Predice pesos usando W = K L C^2."""
     pesos = []
 
-    for L in longitudes:
-        pesos.append(L ** 2)
+    for L, C in zip(longitudes, circunferencias):
+        pesos.append(K * L * (C ** 2))
 
     return pesos
 
