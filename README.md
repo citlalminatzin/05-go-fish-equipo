@@ -77,7 +77,7 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 *Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
 *Coeficiente de correlación $(r): 0.9907$*
 
-En la imagen podemos notar que el ajuste es una muy buena aproximación.
+En la imagen podemos notar que el ajuste es una muy buena aproximación. 
 
 ## Ejercicio 3
 
@@ -96,7 +96,7 @@ El nuevo modelo:
 
 ![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
 
-Aqui podemos notar que el ajuste no nos brinda una buena aproximación a los datos generados por el nuevo modelo, esto se debe a que los puntos de la gráfica no tienen un comportamiento  uniforme.  
+
 
 ## Conclusión
 
