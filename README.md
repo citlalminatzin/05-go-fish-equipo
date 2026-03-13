@@ -47,7 +47,7 @@ Para ejecutar el código, necesitaremos:
 -  `numpy`: Lo necesitaemos para, entre otras cosas, calcular el coeficiente de correlación de Pearson.  
 
 Primero, ejecuta modelos.py, en éste encontrarás funciones como:
- calc_error, modeo_geom, modelo_circ, cal_k_constante. Estas funciones nos servirán para hacer los cálculos necesarios para lo que se pide en los ejercicios. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
+ calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ. Estas funciones nos servirán para hacer los cálculos necesarios para lo que se pide en los ejercicios. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
 
 ## Ejercicio 1
 Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
@@ -61,7 +61,9 @@ Graficamos los datos de esta tabla de acuerdo a la relación:
 $W \propto l ^3$
 
 ![Gráfica de relación $W y l^3$](media/grafica1.png)
-(Por favor modifica esta línea, lo suplico por piedad) Aquí puedes colocar la discusión del modelo, tu interpretación, el efecto de las condiciones iniciales. No tiene que ser perfecto, pero entre más casos puedas cubrir mejor
+
+
+
 
 ## Ejercicio 2
 
@@ -69,12 +71,13 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 
 ¿Qúe tan bueno es el ajuste? ¿Hay algún efecto que nuestro modelo no capture?
 
+
 ![Gráfica del Modelo $W = Kl^3$](media/grafica_modelo1.png)
 
 *Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
-
 *Coeficiente de correlación $(r): 0.9907$*
 
+En la imagen podemos notar que el ajuste es una muy buena aproximación.
 
 ## Ejercicio 3
 
@@ -86,9 +89,14 @@ Ahora añadiremos una dimensión extra a nuestra tabla anterior. Supongamos que 
 
 Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo queda la fórmula explicita del modelo?¿Qué tan bueno es el ajuste?
 
+El nuevo modelo:
+
+## $W=k l C_m^2$
+.
 
 ![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
 
+Aqui podemos notar que el ajuste no nos brinda una buena aproximación a los datos generados por el nuevo modelo, esto se debe a que los puntos de la gráfica no tienen un comportamiento  uniforme.  
 
 ## Conclusión
 
@@ -96,4 +104,4 @@ Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo que
 
 ---
 
-[^1]: Sólo soy una nota al pie, elimíname bro, por favor bro.
+[^1]: 1
