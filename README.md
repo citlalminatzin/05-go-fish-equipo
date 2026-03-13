@@ -61,11 +61,7 @@ Graficamos los datos de esta tabla de acuerdo a la relación:
 
 $W \propto l ^3$
 
-![Gráfica del Modelo $W = Kl^3$](grafica_modelo1.png)
-
-*Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
-
-*Coeficiente de correlación $(r): 0.9907$*
+![Gráfica de relación $W y l^3$](grafica1.png)
 
 (Por favor modifica esta línea, lo suplico por piedad) Aquí puedes colocar la discusión del modelo, tu interpretación, el efecto de las condiciones iniciales. No tiene que ser perfecto, pero entre más casos puedas cubrir mejor
 
@@ -74,6 +70,13 @@ $W \propto l ^3$
 Utiliza los datos anteriores y el método de tu preferencia para estimar un buen valor de $K$ para nuestro modelo de similaridad geométrica $W = Kl^3$. Grafica la estimación contra los datos. 
 
 ¿Qúe tan bueno es el ajuste? ¿Hay algún efecto que nuestro modelo no capture?
+
+![Gráfica del Modelo $W = Kl^3$](grafica_modelo1.png)
+
+*Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
+
+*Coeficiente de correlación $(r): 0.9907$*
+
 
 ## Ejercicio 3
 
