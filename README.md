@@ -82,7 +82,7 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 *Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
 *Coeficiente de correlación $(r): 0.9907$*
 
-En la imagen podemos notar que el ajuste es una muy buena aproximación. 
+En la imagen podemos notar que el ajuste es una muy buena aproximación. El ajuste toca dos puntos de la gráfica
 
 ## Ejercicio 3
 
