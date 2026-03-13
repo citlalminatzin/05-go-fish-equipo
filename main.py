@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import matplotlib.pyplot as plt
-from models import calc_error, modelo_geom, modelo_circ, cal_k_constante
+from models import calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ
 import numpy as np
 
 def plot_ejercicio1(longitudes, pesos):
@@ -44,20 +44,27 @@ def main():
 
     longitudes = [36.81, 31.77, 43.82, 36.82, 32.07, 45.07, 35.89]
     pesos = [0.78, 0.47, 1.16, 0.74, 0.44, 1.40, 0.64]
+    circunferencias = [24.77, 21.29, 27.94, 24.77, 21.59, 31.75, 22.86]
 
     plot_ejercicio1(longitudes, pesos) 
+
     K = cal_k_constante(longitudes, pesos)
     make_plot(longitudes, pesos, K)
     pred = modelo_geom(longitudes, K)
     error = calc_error(pred, pesos)
 
+    print("Modelo W = K L^3")
     print("Constante K:", K)
     print("Error del modelo:", error)
-    """
-    (Si no modificas esta cadena de texto lloro)
-    Aquí va el código, recuerda reutilizar el 
-    código que ya escribiste en otros archivos
-    """
+
+    K_circ = cal_k_circ(longitudes, circunferencias, pesos)
+    pred_circ = modelo_circ(longitudes, circunferencias, K_circ)
+    error_circ = calc_error(pred_circ, pesos)
+
+    print("Modelo W = K L C^2")
+    print("Constante K:", K_circ)
+    print("Error del modelo:", error_circ)
+
 
 if __name__ == "__main__":
     main()
