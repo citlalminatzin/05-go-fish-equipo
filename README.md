@@ -44,7 +44,7 @@ Nota:
 Para ejecutar el código, necesitaremos:
 
 - `matplotlib`: Lo necesitaremos para agregar y vizualizar las gráficas.
--  `numpy`: Lo necesitaemos para hacer algunos cálculos de nuestros modelos.  
+-  `numpy`: Lo necesitaemos para, entre otras cosas, calcular el coeficiente de correlación de Pearson.  
 
 Primero, ejecuta modelos.py, en éste encontrarás funciones como:
  calc_error, modeo_geom, modelo_circ, cal_k_constante. Estas funciones nos servirán para hacer los cálculos necesarios para lo que se pide en los ejercicios. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
@@ -89,10 +89,10 @@ Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo que
 
 ### También puedes agregar tablas y eliminar este sub encabezado
 
-| Elimíname | Elimíname a mí también |
-| -------------- | --------------- |
-| $1$ | $54$ |
-| $2$ | $1000$ |
+| Elimíname | Elimíname a mí también |algo|
+| -------------- | --------------- |--|
+| $1$ | $54$ | 90|
+| $2$ | $1000$ |sd|
 
 (Si no eliminas esta línea lloro) Y luego puedes comentar que con base en la tabla anterior, se ve una explosión en los valores a partir del tiempo $t=2$. 
 
