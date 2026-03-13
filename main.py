@@ -39,6 +39,31 @@ def make_plot(longitudes, pesos, K):
     plt.savefig("grafica_modelo1.png")
     plt.show()
     plt.close()
+    
+def make_plot_circ(longitudes, circunferencias, pesos, K):
+    """Gráfica del modelo W = K L C^2 usando C promedio."""
+
+    plt.scatter(longitudes, pesos,
+                color="darkmagenta",
+                label="Datos reales")
+
+    l_espacio = np.linspace(min(longitudes), max(longitudes), 100)
+    C_prom = np.mean(circunferencias)
+
+    plt.plot(l_espacio,
+             K * l_espacio * (C_prom ** 2),
+             color="cornflowerblue",
+             label="Modelo W = K L C^2")
+
+    plt.xlabel("Longitud (cm)")
+    plt.ylabel("Peso (kg)")
+    plt.title("Modelo con Circunferencia")
+    plt.legend()
+    plt.grid(True)
+
+    plt.savefig("grafica_modelo2.png")
+    plt.show()
+    plt.close()
 
 def main():
 
@@ -61,10 +86,11 @@ def main():
     pred_circ = modelo_circ(longitudes, circunferencias, K_circ)
     error_circ = calc_error(pred_circ, pesos)
 
-    print("Modelo W = K L C^2")
+    make_plot_circ(longitudes, circunferencias, pesos, K_circ)
+
+    print("\nModelo W = K L C^2")
     print("Constante K:", K_circ)
     print("Error del modelo:", error_circ)
-
 
 if __name__ == "__main__":
     main()
