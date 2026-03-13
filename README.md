@@ -47,7 +47,10 @@ Para ejecutar el código, necesitaremos:
 -  `numpy`: Lo necesitaemos para, entre otras cosas, calcular el coeficiente de correlación de Pearson.  
 
 Primero, ejecuta modelos.py, en éste encontrarás funciones como:
- calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ. Estas funciones nos servirán para hacer los cálculos necesarios para lo que se pide en los ejercicios. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
+ calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ. Estas funciones nos servirán para construir y evaluar los modelos de similitud geométrica entre la longitud y el peso de los peces.
+Hay funciones para estimar la constante K del modelo W = K L^3,
+calcular pesos de la competencia, medir la correlación de Pearson y calcular error
+entre predicción y datos reales. Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
 
 ## Ejercicio 1
 Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
