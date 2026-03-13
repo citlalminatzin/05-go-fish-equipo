@@ -41,14 +41,15 @@ Nota:
 
 ## Uso e instalación
 
-(Si no eliminas esta línea lloro) Aquí escribe qué necesitas que instale para ejecutar tu código, por ejemplo:
+Para ejecutar el código, necesitaremos:
 
-- `matplotlib`
+- `matplotlib` Lo necesitaremos para agregar y vizualizar las graficas. 
 
+Primero, ejecuta modelos.py, despues, main.py
 (Si no eliminas esta línea lloro) Y dime cómo debería ejecutar tu código y en qué orden. Recuerda que antes de ejecutar tu código leeré tu `README.md`. Por ejemplo la manera en la que propongo que organizes tu código es
 
 - `main.py`: Contiene el código para graficar cada uno de los tres ejercicios
-- `` (Por favor modifica esta línea)
+
 
 ## Ejercicio 1
 Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
