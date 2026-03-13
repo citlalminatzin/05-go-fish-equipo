@@ -82,6 +82,7 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 
 Ahora añadiremos una dimensión extra a nuestra tabla anterior. Supongamos que además de los datos anteriores también tenemos disponible la circunferencia máxima de cada pez.
 |Cicunferencia Máxima|24.77|21.29|27.94|21.59|31.75|22.86|
+|-----|----|-----|-----|-----|----|----|
 
 Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo queda la fórmula explicita del modelo?¿Qué tan bueno es el ajuste?
 
