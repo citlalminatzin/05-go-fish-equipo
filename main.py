@@ -10,8 +10,8 @@ def plot_ejercicio1(longitudes, pesos):
 
     plt.scatter(L3, pesos, color="turquoise")
 
-    plt.xlabel("L^3")
-    plt.ylabel("Peso (kg)")
+    plt.xlabel("Longitud l [cm]")
+    plt.ylabel("Peso W [kg]")
     plt.title("Relación entre W y L^3")
 
     plt.grid(True)
@@ -30,8 +30,8 @@ def make_plot(longitudes, pesos, K):
              color="mediumpurple",
              label="Modelo W = KL^3")
 
-    plt.xlabel("Longitud (cm)")
-    plt.ylabel("Peso (kg)")
+    plt.xlabel("Longitud l [cm]")
+    plt.ylabel("Peso W [kg]")
     plt.title("Modelo de similitud geométrica")
     plt.legend()
     plt.grid(True)
@@ -55,8 +55,8 @@ def make_plot_circ(longitudes, circunferencias, pesos, K):
              color="cornflowerblue",
              label="Modelo W = K L C^2")
 
-    plt.xlabel("Longitud (cm)")
-    plt.ylabel("Peso (kg)")
+    plt.xlabel("Longitud l [cm]")
+    plt.ylabel("Peso W [kg]")
     plt.title("Modelo con Circunferencia")
     plt.legend()
     plt.grid(True)
