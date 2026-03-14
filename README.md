@@ -1,65 +1,124 @@
-# Pon aquí el título de tu práctica o no, no soy tu papá
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jw8MUQHd)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23030704)
+# Práctica 5: Modelos de Similitud Geométrica
 
-(Si no eliminas esta línea lloro) Este es un archivo de ejemplo donde debes de colocar la respuesta a tus ejercicios, piénsalo como tu reporte de práctica. Aquí puedes introducir el problema y definir los términos que consideres apropiados de forma concisa.
+**El Problema del Campeonato de Pesca De Róbalo**
+
+Imaginemos que la competencia premia al pez más pesado, pero la única herramienta con la que contamos para determinar el peso de los peces es una cinta métrica. Como en las versiones anteriores del campeonato asistieron miles de participantes queremos poder predecir el peso de un pescado en término de algunas dimensiones fáciles de medir. A pesar de que el peso de un pescado se ve afectado por variables como la forma del pescado, la densidad del pescado, la edad del pescado, entre otras, haremos un modelo que dependa solo de variables medibles por nuestra cinta métrica. Algunos de los supuestos que usaremos en nuestro modelo son que:
+
+• La especie está fija y todos los pescados serán robalos. (En general esto sí sucede en los campeonatos).
+
+• La densidad de los pescados es constante. (Esto es poco realista pero nos servirá para un primer modelo).
+
+• Las variables como la estación del año, el sexo, la edad, etc. no afectan al peso del róbalo.
+
+• Los róbalos son geométricamente similares.
+
+Ahora, recordando que la densidad (ρ) es igual a la masa entre el volumen, podemos calcular el peso (W) de un pescado multiplicando su volumen por su densidad:
+
+$W =V ⋅ ρ$
+
+Ahora, bajo nuestro supuesto de densidad constante y de similitud geométrica tenemos que
+
+$W \propto V$
+
+$W \propto l ^3$
+
+A continuación pondremos a prueba nuestro primer modelo.
+
+Nota:
+
+• La masa corresponde a la cantidad de materia que compone un objeto determinado.
+
+• El peso, en cambio, corresponde a la fuerza resultante de la acción que ejerce la gravedad de la Tierra (en nuestro caso).
 
 ## Integrantes
 
-(Si no eliminas esta línea lloro) Escribe tus integrantes iniciando por apellido de forma alfabética
-
-- (Si no modificas esta línea lloro) Babilonia, Aureliano
-- (Si no modificas esta línea lloro) Buendía, Aureliano
-- (Si no modificas esta línea lloro) Segundo, Aureliano
+- Herrera Barrera Joyce
+- Pulido Pérez José Antonio
+- Rodríguez Rodríguez Diego
 
 
 ## Uso e instalación
 
-(Si no eliminas esta línea lloro) Aquí escribe qué necesitas que instale para ejecutar tu código, por ejemplo:
+Para ejecutar el código, necesitaremos:
 
-- `matplotlib`
+- `matplotlib`: Lo necesitaremos para agregar y vizualizar las gráficas.
+-  `numpy`: Lo necesitaemos para, entre otras cosas, calcular el coeficiente de correlación de Pearson.  
 
-(Si no eliminas esta línea lloro) Y dime cómo debería ejecutar tu código y en qué orden. Recuerda que antes de ejecutar tu código leeré tu `README.md`. Por ejemplo la manera en la que propongo que organizes tu código es
+Primero, ejecuta modelos.py, en éste encontrarás funciones como:
+ calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ. Estas funciones nos servirán para construir y evaluar los modelos de similitud geométrica entre la longitud y el peso de los peces.
+Hay funciones para estimar la constante K del modelo W = K L^3,
+calcular pesos de la competencia, medir la correlación de Pearson y calcular error
+entre predicción y datos reales.
 
-- `main.py`: Contiene el código para graficar cada uno de los tres ejercicios
-- `` (Por favor modifica esta línea)
+Despues, ejecuta main.py, ahí podrás encontrar el código de los resultados esperados, (las gráficas).
 
 ## Ejercicio 1
+Para poder ajustar nuestro modelo necesitamos datos sobre el peso $(W)$ y la longitud $(l)$ de algunos pescados. Los únicos datos sobrevivientes de los campeonatos anteriores se encuentran en la siguiente tabla: 
 
-(Por favor modifica esta línea, lo suplico por piedad) Aquí puedes colocar la discusión del modelo, tu interpretación, el efecto de las condiciones iniciales. No tiene que ser perfecto, pero entre más casos puedas cubrir mejor
+![Tabla de Datos](media/tabla.png)
+
+En realidad, lo que medimos cuando "pesamos" en kg es la masa, y no el peso, de lo que estemos midiendo. 
+
+Graficamos los datos de esta tabla de acuerdo a la relación:
+
+$W \propto l ^3$
+
+![Gráfica de relación $W y l^3$](media/grafica1.png)
+
+
+
 
 ## Ejercicio 2
 
-(Por favor modifica esta línea, tú puedes yo creo en ti) Puedes darle formato de **negritas**, *itálicas*, incluir texto matemático $x\approx 1, \epsilon > 0$, [enlaces](https://www.markdownguide.org/cheat-sheet/), `código`,
+Utiliza los datos anteriores y el método de tu preferencia para estimar un buen valor de $K$ para nuestro modelo de similaridad geométrica $W = Kl^3$. Grafica la estimación contra los datos. 
 
-```python
-# Esto es un ejemplo, lo puedes quitar
-print("Código en bloque")
-```
+¿Qúe tan bueno es el ajuste? ¿Hay algún efecto que nuestro modelo no capture?
 
-(Si no eliminas esta línea lloro) También puedes incluir citas
 
-> Por favor elimina esta cita
+![Gráfica del Modelo $W = Kl^3$](media/grafica_modelo1.png)
 
-(Si no eliminas esta línea lloro) Puedes incluir notas al pie [^1].
+*Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
+*Coeficiente de correlación $(r): 0.9907$*
+
+En la imagen podemos notar que el ajuste es una muy buena aproximación. El ajuste toca dos puntos de la gráfica, sin embargo, mantiene la tendencia de los datos reales (dejando de lado valores atípicos). 
+El valor obtenido en el índice de correlación nos dice que hay una relación positiva y muy marcada entre la longitud de los peces y su peso, lo que quiere decir que es muy marcado el aumento del peso de los ejemplares en función de su talla. 
 
 ## Ejercicio 3
 
-(Puedes modificar esta línea, su único propósito es existir para ser modificada, cada momento que existe en su forma original llora por no formar parte de la formación de jovenes matemáticas como tú) También se pueden incluir imágenes. Aunque a veces aunque se muestre localmente, no significa que se vaya a mostrar en GitHub. Por ejemplo, adjunto una imagen de una bella rosa:
+# Coeficiente de correlación de Pearson
 
-![Texto alternativo, imagen de la cara de un Mr. Meeseks en fondo azul con la leyenda Existence is Pain por debajo](media/existence_is_pain.jpg)
+Ahora añadiremos una dimensión extra a nuestra tabla anterior. Supongamos que además de los datos anteriores también tenemos disponible la circunferencia máxima de cada pez.
+|Cicunferencia Máxima|24.77|21.29|27.94|21.59|31.75|22.86|
+|-----|----|-----|-----|-----|----|----|
 
-### También puedes agregar tablas y eliminar este sub encabezado
+Realice el ajuste del nuevo modelo en términos de la circunferencia ¿Cómo queda la fórmula explicita del modelo?¿Qué tan bueno es el ajuste?
 
-| Elimíname | Elimíname a mí también |
-| -------------- | --------------- |
-| $1$ | $54$ |
-| $2$ | $1000$ |
+El nuevo modelo:
 
-(Si no eliminas esta línea lloro) Y luego puedes comentar que con base en la tabla anterior, se ve una explosión en los valores a partir del tiempo $t=2$. 
+## $W=k l C_m^2$
+.
+
+![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
+
+Podemos observar que el ajuste es aún mejor con este modelo, pues los datos reales se ven mucho más cercanos a la curva del modelo. Lo anterior se ve respaldado por un error menor con respecto al utilizado en el ejercicio anterior. 
+
+
+|        | Modelo 1 ($W \propto l^3$) | Modelo 2 ($W \propto lC_{máx}^2$) |
+|--------|-----------------------------|------------------------------------|
+| Error  | 0.002123081843878108        | 0.0019396789703513123              |
+
 
 ## Conclusión
 
-(Por favor modifica esta línea bro, es la última que tienes que modificar bro, por favor bro) Es buena práctica concluir tus prácticas. ¿Qué te llevas? ¿Sientes que fue relevante para ti? ¿Se te complicó algún aspecto? ¿Hubo algún resultado que contradijera tu intuición? 
+
+La realización de esta práctica ha resultado bastante importante, pues es un acercamiento noble y sencillo al concepto de correlación (qué tanto depende una variable de otra y en qué manera lo hace), pues es de gran utilidad en el análisis estadístico de datos. 
+
+Hemos visto cómo al agregar variables explicativas podemos afinar un modelo que, en principio, es bastante sencillo. También ha sido interesante tener que ajustar cómo visualizamos los datos, pues aunque los pesos son los mismos en los modelos, fue importante reconocer que la variable independiente cambió de uno a otro (teniendo $l^3$ en el primero y $lC_{máx}$ en el segundo). 
+
+Quizás algo que habría estado interesante de observar es cómo el agregar variables nuevas no siempre mejora el modelo. A veces hay un límite con el cual podemos trabajar antes de dejar de ver mejorías en cuanto a la minimización del error o, inclusive se puede sobreexplicar el fenómeno en cuetión, lo que lleva a que el modelo no sea capaz de predecir si no tiene las condiciones exactas que se usaron para su desarrollo. 
 
 ---
 
-[^1]: Sólo soy una nota al pie, elimíname bro, por favor bro.
+[^1]: 1

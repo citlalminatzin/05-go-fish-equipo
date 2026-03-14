@@ -1,24 +1,94 @@
 #!/usr/bin/env python
 
 import matplotlib.pyplot as plt
-from models import calc_error, modelo_geom, modelo_circ
+from models import calc_error, modelo_geom, modelo_circ, cal_k_constante, cal_k_circ
+import numpy as np
+
+def plot_ejercicio1(longitudes, pesos):
+
+    L3 = np.array(longitudes)**3
+
+    plt.scatter(L3, pesos, color="turquoise")
+
+    plt.xlabel("Longitud l [cm]")
+    plt.ylabel("Peso W [kg]")
+    plt.title("Relación entre W y L^3")
+
+    plt.grid(True)
+
+    plt.savefig("media/grafica1.png")
+    plt.show()
+    plt.close()
+
+def make_plot(longitudes, pesos, K):
+
+    plt.scatter(longitudes, pesos, color="navy", label="Datos reales")
+
+    l_espacio = np.linspace(min(longitudes), max(longitudes), 100)
+
+    plt.plot(l_espacio, K*(l_espacio**3),
+             color="mediumpurple",
+             label="Modelo W = KL^3")
+
+    plt.xlabel("Longitud l [cm]")
+    plt.ylabel("Peso W [kg]")
+    plt.title("Modelo de similitud geométrica")
+    plt.legend()
+    plt.grid(True)
+
+    plt.savefig("media/grafica_modelo1.png")
+    plt.show()
+    plt.close()
+    
+def make_plot_circ(longitudes, circunferencias, pesos, K):
+    """Gráfica del modelo W = K L C^2 """
+
+    
+    X = np.array(longitudes) * (np.array(circunferencias)**2)
+
+    plt.scatter(X, pesos, color="darkmagenta", label="Datos reales")
+
+    x_line = np.linspace(min(X), max(X), 100)
+    plt.plot(x_line, K*x_line, color="cornflowerblue",
+             label="Modelo W = KLC²")
+
+    plt.xlabel("L C²")
+    plt.ylabel("Peso W [kg]")
+    plt.title("Modelo W = K L C²")
+    plt.legend()
+    plt.grid(True)
 
 
-def make_plot():
-    """
-    (Si no modificas esta cadena de texto lloro)
-    Si repites mucho tu código para
-    graficar puedes guardarlo en una función
-    """
-    ... # Esto significa implementación pendiente, lo puedes eliminar
+    plt.savefig("media/grafica_modelo2.png")
+    plt.show()
+    plt.close()
 
 def main():
-    """
-    (Si no modificas esta cadena de texto lloro)
-    Aquí va el código, recuerda reutilizar el 
-    código que ya escribiste en otros archivos
-    """
-    ... # Esto significa implementación pendiente, lo puedes eliminar
+
+    longitudes = [36.81, 31.77, 43.82, 36.82, 32.07, 45.07, 35.89]
+    pesos = [0.78, 0.47, 1.16, 0.74, 0.44, 1.40, 0.64]
+    circunferencias = [24.77, 21.29, 27.94, 24.77, 21.59, 31.75, 22.86]
+
+    plot_ejercicio1(longitudes, pesos) 
+
+    K = cal_k_constante(longitudes, pesos)
+    make_plot(longitudes, pesos, K)
+    pred = modelo_geom(longitudes, K)
+    error = calc_error(pred, pesos)
+
+    print("Modelo W = K L^3")
+    print("Constante K:", K)
+    print("Error del modelo:", error)
+
+    K_circ = cal_k_circ(longitudes, circunferencias, pesos)
+    pred_circ = modelo_circ(longitudes, circunferencias, K_circ)
+    error_circ = calc_error(pred_circ, pesos)
+
+    make_plot_circ(longitudes, circunferencias, pesos, K_circ)
+
+    print("\nModelo W = K L C^2")
+    print("Constante K:", K_circ)
+    print("Error del modelo:", error_circ)
 
 if __name__ == "__main__":
     main()
