@@ -82,7 +82,7 @@ Utiliza los datos anteriores y el método de tu preferencia para estimar un buen
 *Modelo ajustado: $W = 1.45 \times 10^{-5} \cdot l^3$*
 *Coeficiente de correlación $(r): 0.9907$*
 
-En la imagen podemos notar que el ajuste es una muy buena aproximación. El ajuste toca dos puntos de la gráfica, sin embargo, mantiene la tendencia de los datos reales (dejanso de lado valores atípicos). 
+En la imagen podemos notar que el ajuste es una muy buena aproximación. El ajuste toca dos puntos de la gráfica, sin embargo, mantiene la tendencia de los datos reales (dejando de lado valores atípicos). 
 El valor obtenido en el índice de correlación nos dice que hay una relación positiva y muy marcada entre la longitud de los peces y su peso, lo que quiere decir que es muy marcado el aumento del peso de los ejemplares en función de su talla. 
 
 ## Ejercicio 3

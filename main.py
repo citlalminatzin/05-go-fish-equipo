@@ -41,25 +41,23 @@ def make_plot(longitudes, pesos, K):
     plt.close()
     
 def make_plot_circ(longitudes, circunferencias, pesos, K):
-    """Gráfica del modelo W = K L C^2 usando C promedio."""
+    """Gráfica del modelo W = K L C^2 """
 
-    plt.scatter(longitudes, pesos,
-                color="darkmagenta",
-                label="Datos reales")
+    
+    X = np.array(longitudes) * (np.array(circunferencias)**2)
 
-    l_espacio = np.linspace(min(longitudes), max(longitudes), 100)
-    C_prom = np.mean(circunferencias)
+    plt.scatter(X, pesos, color="darkmagenta", label="Datos reales")
 
-    plt.plot(l_espacio,
-             K * l_espacio * (C_prom ** 2),
-             color="cornflowerblue",
-             label="Modelo W = K L C^2")
+    x_line = np.linspace(min(X), max(X), 100)
+    plt.plot(x_line, K*x_line, color="cornflowerblue",
+             label="Modelo W = KLC²")
 
-    plt.xlabel("Longitud l [cm]")
+    plt.xlabel("L C²")
     plt.ylabel("Peso W [kg]")
-    plt.title("Modelo con Circunferencia")
+    plt.title("Modelo W = K L C²")
     plt.legend()
     plt.grid(True)
+
 
     plt.savefig("media/grafica_modelo2.png")
     plt.show()
