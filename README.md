@@ -102,8 +102,12 @@ El nuevo modelo:
 
 ![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
 
-Podemos observar que el ajuste es aún mejor con este modelo, lo cual es respaldado por un error menor con respecto al utilizado en el ejercicio anterior. 
+Podemos observar que el ajuste es aún mejor con este modelo, pues los datos reales se ven mucho más cercanos a la curva del modelo. Lo anterior se ve respaldado por un error menor con respecto al utilizado en el ejercicio anterior. 
 
+
+|        | Modelo 1 ($W \propto l^3$) | Modelo 2 ($W \propto lC_{máx}^2$) |
+|--------|-----------------------------|------------------------------------|
+| Error  | 0.002123081843878108        | 0.0019396789703513123              |
 
 
 ## Conclusión
