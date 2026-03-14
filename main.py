@@ -36,7 +36,7 @@ def make_plot(longitudes, pesos, K):
     plt.legend()
     plt.grid(True)
 
-    plt.savefig("media/grafica_modeloe1.png")
+    plt.savefig("media/grafica_modelo1.png")
     plt.show()
     plt.close()
     
