@@ -102,11 +102,18 @@ El nuevo modelo:
 
 ![Gráfica del Modelo $W = KL C^2$](media/grafica_modelo2.png)
 
+Podemos observar que el ajuste es aún mejor con este modelo, lo cual es respaldado por un error menor con respecto al utilizado en el ejercicio anterior. 
+
 
 
 ## Conclusión
 
-(Por favor modifica esta línea bro, es la última que tienes que modificar bro, por favor bro) Es buena práctica concluir tus prácticas. ¿Qué te llevas? ¿Sientes que fue relevante para ti? ¿Se te complicó algún aspecto? ¿Hubo algún resultado que contradijera tu intuición? 
+
+La realización de esta práctica ha resultado bastante importante, pues es un acercamiento noble y sencillo al concepto de correlación (qué tanto depende una variable de otra y en qué manera lo hace), pues es de gran utilidad en el análisis estadístico de datos. 
+
+Hemos visto cómo al agregar variables explicativas podemos afinar un modelo que, en principio, es bastante sencillo. También ha sido interesante tener que ajustar cómo visualizamos los datos, pues aunque los pesos son los mismos en los modelos, fue importante reconocer que la variable independiente cambió de uno a otro (teniendo $l^3$ en el primero y $lC_{máx}$ en el segundo). 
+
+Quizás algo que habría estado interesante de observar es cómo el agregar variables nuevas no siempre mejora el modelo. A veces hay un límite con el cual podemos trabajar antes de dejar de ver mejorías en cuanto a la minimización del error o, inclusive se puede sobreexplicar el fenómeno en cuetión, lo que lleva a que el modelo no sea capaz de predecir si no tiene las condiciones exactas que se usaron para su desarrollo. 
 
 ---
 
